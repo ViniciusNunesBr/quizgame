@@ -225,3 +225,38 @@ button:hover
 
 
 }
+
+
+.feedback 
+{
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.feedback.correct 
+{
+  color:#28a745;
+}
+
+.feedback.incorrect
+{
+  color:#dc3545;
+}
+.explanation
+{
+  font-size: 1rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+#difficulty-selection
+{
+  margin-bottom: 25px;
+}
+
+.difficulty-btn.selected {
+  background-color: #4CAF50; /* verde */
+  color: white;
+  border: 2px solid #2E7D32;
+}

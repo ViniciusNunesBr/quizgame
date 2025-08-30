@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz game</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="container">
 
-    <div  class="screen active" id="start-screen">
+    <div class="screen active" id="start-screen">
       <h1>Quiz Time!</h1>
       <p>Test your knowledge with these fun questions</p>
+
+      <div id="difficulty-selection">
+        <p>Choose a difficulty:</p>
+        <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+        <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+        <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+      </div>
+      
       <button id="start-btn">Start Quiz</button>
     </div>
 
@@ -20,11 +30,12 @@
         <h2 id="question-text">Question goes here</h2>
 
         <div class="quiz-info">
-            <p>
-              Question <span id="current-question">1</span> of <span id="total-questions">5</span>
-            </p>
+          <p>
+            Question <span id="current-question">1</span> of <span id="total-questions">5</span>
+          </p>
 
-            <p>Score: <span id="score">0</span></p>
+          <p>Score: <span id="score">0</span></p>
+          <p>⏳ Time: <span id="timer">15</span>s</p>
         </div>
       </div>
 
@@ -32,6 +43,9 @@
         <!-- Answer button will be inserted here from our js code later at some point-->
 
       </div>
+
+      <div id="feedback" class="feedback"></div>
+      <div id="explanation" class="explanation"></div>
 
       <div class="progress-bar">
         <div id="progress" class="progress"></div>
@@ -42,6 +56,7 @@
       <h1>Quiz Results</h1>
       <div class="result-info">
         <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span> </p>
+        <p>🏆 Best Score: <span id="best-score">0</span> </p>
         <div id="result-message"> Good job</div>
       </div>
       <button id="restart-btn">Restart Quiz</button>
@@ -52,4 +67,5 @@
 
 
 </body>
+
 </html>
