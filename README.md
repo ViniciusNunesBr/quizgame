@@ -2,9 +2,12 @@
 
 Um quiz simples e divertido feito com **HTML, CSS e JavaScript** para testar conhecimentos de forma interativa.  
 O projeto foi desenvolvido com foco em **simplicidade**, **responsividade** e **boa experiência do usuário**.
+
 📸 Preview
-<img width="1410" height="715" alt="image" src="https://github.com/user-attachments/assets/62f694cd-11a2-41de-95d4-4b992e2d7c9e" />
----
+<img width="1017" height="654" alt="image" src="https://github.com/user-attachments/assets/73941475-8c5d-4020-b30f-96cbc27d5490" />
+<img width="1247" height="814" alt="image" src="https://github.com/user-attachments/assets/c4cb0449-44a9-4e04-972a-fbc9a9c2ea55" />
+<img width="1059" height="655" alt="image" src="https://github.com/user-attachments/assets/685b6382-e9d4-456c-a348-eab79208bfa7" />
+
 
 ## ✨ Funcionalidades do projeto 
 
