@@ -20,6 +20,7 @@ O projeto foi desenvolvido com foco em **simplicidade**, **responsividade** e **
 - 🎚️ **Modo de dificuldade**: Fácil, Médio e Difícil (ajusta número de perguntas e tempo por questão)  
 - 🔀 **Perguntas aleatórias**: a ordem das questões muda a cada jogo  
 - 🔁 **Alternativas embaralhadas**: para não decorar posições
+- 🌙 Dark Mode: botão tipo interruptor que alterna entre tema claro e escuro para melhor visualização à noite
 - 🏆 **Ranking / Melhor pontuação**: salva o recorde local usando `localStorage`  
   
 ---
