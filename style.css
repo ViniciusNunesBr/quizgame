@@ -260,3 +260,158 @@ button:hover
   color: white;
   border: 2px solid #2E7D32;
 }
+
+.theme-switch
+{
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+
+
+}
+
+.theme-switch input 
+{
+  display: none;
+}
+
+.slider
+{
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider::before
+{
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+  
+}
+
+.theme-switch input:checked+.slider 
+{
+  background-color: #444;
+}
+.theme-switch input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+
+
+
+/* Dark Mode */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #00ff00; /* verde para texto principal */
+}
+
+/* Todos os textos do quiz e start screen ficam verdes */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p,
+body.dark-mode .answer-btn,
+body.dark-mode #feedback,
+body.dark-mode #explanation,
+body.dark-mode .quiz-info,
+body.dark-mode #start-screen p,
+body.dark-mode #start-screen h1,
+body.dark-mode .difficulty-btn,
+body.dark-mode #start-btn {
+  color: #00ff00;
+}
+
+/* Fundo do quiz e start screen no dark mode */
+body.dark-mode .container,
+body.dark-mode #start-screen {
+  background-color: #1e1e1e;
+}
+
+/* Botões de resposta escuros */
+body.dark-mode .answer-btn {
+  background-color: #333;
+  border: 1px solid #00ff00;
+}
+
+/* Botões de dificuldade e start */
+body.dark-mode .difficulty-btn,
+body.dark-mode #start-btn {
+  background-color: #333;
+  border: 1px solid #00ff00;
+}
+
+/* Destaque correto/incorreto */
+body.dark-mode .answer-btn.correct {
+  background-color: #006400; /* verde escuro */
+}
+
+body.dark-mode .answer-btn.incorrect {
+  background-color: #8b0000; /* vermelho escuro */
+}
+
+body.dark-mode #progress {
+  background-color: #00ff00; /* verde */
+}
+
+body.dark-mode #question-text {
+  color: #00ff00; /* verde */
+}
+
+/* Texto do Result Screen no Dark Mode */
+body.dark-mode #result-screen,
+body.dark-mode #result-screen h1,
+body.dark-mode #result-screen .result-info,
+body.dark-mode #result-screen .result-info p,
+body.dark-mode #result-screen #result-message {
+  color: #00ff00; /* verde */
+}
+
+body.dark-mode #restart-btn {
+  background-color: #00ff00; /* verde vibrante */
+  color: #000; /* texto preto para contraste */
+}
+
+body.dark-mode #restart-btn:hover {
+  background-color: #00cc00;
+}
+
+#dark-mode-toggle {
+  position: absolute;
+  top: 3px;
+
+  right: 60px; /* deixa um espaço do botão principal */
+}
+
+#dark-mode-btn {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#dark-mode-btn:hover {
+  transform: rotate(20deg); /* efeito divertido ao passar o mouse */
+}
+
+/* Alterando cor da lua no dark mode */
+body.dark-mode #dark-mode-btn {
+  color: yellow; /* lua brilhante */
+}

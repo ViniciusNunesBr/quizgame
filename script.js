@@ -4,13 +4,14 @@
 Atualizações que faltam:
 
 ⚡ Funcionalidades intermediárias
-Modo de dificuldade 🎚️
+Modo de dificuldade 🎚️OK!!
 – Fácil, Médio, Difícil (com mais ou menos tempo, mais ou menos perguntas).
-Perguntas aleatórias 🔀
+Perguntas aleatórias 🔀ok!
 – Embaralhar a ordem das perguntas a cada jogo.
-Embaralhar respostas 🔁
+Embaralhar respostas 🔁OK!
 – Misturar a ordem das alternativas para não decorar pela posição.
-Sistema de vidas ❤️
+
+Sistema de vidas ❤️ NO!!
 – O jogador tem 3 vidas e perde uma a cada resposta errada.
 – O quiz acaba se as vidas acabarem.
 
@@ -18,14 +19,17 @@ Sistema de vidas ❤️
 
 Som e efeitos 🔊
 – Efeito sonoro para acerto/erro e tela de vitória.
+
 Modo multiplayer 👥
 – Jogar em turnos (Jogador 1 responde, depois Jogador 2, e mostra quem fez mais pontos).
 Banco de perguntas externo (JSON) 📂
 – Separar as perguntas em um arquivo .json para facilitar atualização.
+
 Temas de design (dark mode, colorido) 🎨
 – Botão para trocar entre tema claro e escuro.
 Perguntas com imagem 🖼️
 – Exibir imagens ou até vídeos na questão (Ex: “De qual filme é essa cena?”).
+
 Pontuação baseada no tempo ⏱️
 – Quanto mais rápido responder, mais pontos ganha.
 
@@ -61,6 +65,26 @@ const progressBar = document.getElementById("progress");
 
 const timerSpan = document.getElementById("timer");
 const bestScoreSpan= document.getElementById("best-score");
+const toggle = document.getElementById("theme-toggle");
+const darkModeBtn = document.getElementById("dark-mode-btn");
+
+
+
+
+
+toggle.addEventListener("change", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+
+
+darkModeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+
+
+
 
 // QUIZ STATE VARS
 
@@ -394,7 +418,7 @@ function selectAnswer (event){
     {
       showResults()
     }
-  },1000 );
+  },3500 );
 
 }
 
