@@ -17,7 +17,7 @@ Sistema de vidas ❤️ NO!!
 
 🔥 Funcionalidades avançadas
 
-Som e efeitos 🔊
+Som e efeitos 🔊 OK!!
 – Efeito sonoro para acerto/erro e tela de vitória.
 
 Modo multiplayer 👥
@@ -68,7 +68,9 @@ const bestScoreSpan= document.getElementById("best-score");
 const toggle = document.getElementById("theme-toggle");
 const darkModeBtn = document.getElementById("dark-mode-btn");
 
-
+const correctSound = new Audio("sounds/correct.mp3");
+const incorrectSound = new Audio("sounds/incorrect.mp3");
+const winSound = new Audio("sounds/win.mp3")
 
 
 
@@ -397,10 +399,12 @@ function selectAnswer (event){
     scoreSpan.textContent=score;
     feedbackDiv.textContent = "Boa! Você acertou! 🎉";
     feedbackDiv.classList.add("correct");
+    correctSound.play();
   } else 
   {
     feedbackDiv.textContent = "Ops! Resposta errada. ❌";
     feedbackDiv.classList.add("incorrect");
+    incorrectSound.play();
 
   }
 
@@ -439,10 +443,11 @@ function showResults()
 
 
 
-  const percentage = (score/quizQuestions.length)*100
+  const percentage = (score/currentQuizQuestions.length)*100
 
   if (percentage === 100) {
     resultMessage.textContent = "Perfect! You're a genius!";
+    winSound.play();
   } else if (percentage >= 80) {
     resultMessage.textContent = "Great job! You know your stuff!";
   } else if (percentage >= 60) {
